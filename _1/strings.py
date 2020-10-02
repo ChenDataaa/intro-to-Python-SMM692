@@ -19,26 +19,23 @@ Agenda :
 """
 
 # %% let's make some order
-'''
-let's make some order: Python is not a human being; what you interpret as a number could be a string for Python. All what is included among quotes - single or double - is a string. Let's consider the following:
-'''
-# a string
+
 S0 = 'abc'
-# another string
+
 S1 = '123'
 # test the type of S0 and S1
-type(S0) == type(S1)
+type(S0) == type(S1)  # True
 
 # %% string manipulation
 
 # index to query a string's elements
 # --+ let's retrieve the first element
-S0[0]
-# --+ and the last one
-S0[-1]
+S0[0]   #'a'
+
+S0[-1]  #'c'
 # --+ the first two elements (note: the upper bound of the index, '2' in this
 #     case is not retrieved)
-S0[0:2]
+S0[0:2] #'ab'!!!!!!!!!!!
 # --+ slice the string to get the last two elements
 S0[-2:]
 # is it possible 'to sum' – i.e., to concatenate – strings?
@@ -46,7 +43,6 @@ S0[-2:]
 S0 + S1
 # --+ use the join method to make your code more elegant and readable
 ''.join([S0, S1])
-# --+ now play with the join method to use custom separators
 ' -- '.join([S0, S1])
 '******'.join([S0, S1])
 
@@ -58,6 +54,9 @@ str(10)
 '%s' % 10
 # ----+ option 2b: 'format' builtin function
 '{}'.format(10)
+print('{}{}'.format(10.,1))  #10.01
+
+print('{}.{}'.format(10,1))
 # --+ example
 PRICE = 99.99
 UNIT = '$'
@@ -71,7 +70,7 @@ S = 'Diplo is one of my favorite electronic music producers'
 # --+ double quotes - FINE!
 S = "Diplo is one of my favorite electronic music producers"
 # --+ don't mix and match
-S = "Diplo is one of my favorite electronic music producers'
+S = "Diplo is one of my favorite electronic music producers"
 
 # single and double quotes can be purposefully combined into the same string
 # --+ example, the single quote is associated with the Saxon Genitive
